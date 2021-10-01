@@ -20,7 +20,7 @@ public class SelectionSort {
    * [2, 5, 6]             [16, 7, 20]           7
    * [2, 5, 6, 7]          [16, 20]              16
    * [2, 5, 6, 7, 16]      [20]                  20
-   * [2, 5, 6, 7, 16, 20]	 []                    -
+   * [2, 5, 6, 7, 16, 20]  []                    -
    *
    */
   public static void sort(int[] numbers) {
