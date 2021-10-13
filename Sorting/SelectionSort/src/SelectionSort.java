@@ -50,7 +50,7 @@ public class SelectionSort {
 
 /*
  * Performance:
- * n/2 * (n -1) + c
- * f(n) = (n^2 - n) / 2 + c
+ * c * n/2 * (n -1) + c
+ * f(n) = c * (n^2 - n) / 2 + c
  * O(n) = n^2
- * /
+ */
