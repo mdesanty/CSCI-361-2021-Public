@@ -1,7 +1,3 @@
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Collections;
-
 public class QueueLL<T extends Comparable<T>> implements IQueue<T>
 {
   private Node head;
@@ -19,9 +15,9 @@ public class QueueLL<T extends Comparable<T>> implements IQueue<T>
     // runs in constant time: O(1)
     // FIFO: this operation places new items at the head of the linked list.
 
-    Node n = new Node(item);
-    n.next = head.next;
-    head.next = n;
+    Node node = new Node(item);
+    node.next = head.next;
+    head.next = node;
     count++;
   }
 
@@ -35,26 +31,26 @@ public class QueueLL<T extends Comparable<T>> implements IQueue<T>
       throw new IllegalStateException("dequeue error: queue is empty!");
 
     T ret = null;
-    Node cur = head;
+    Node current = head;
 
     // while not at the tail...
-    while (cur.next != null)
+    while (current.next != null)
     {
       // if I am at the second from the tail of the queue...
-      if (cur.next.next == null)
+      if (current.next.next == null)
       {
         // grab the data from the last item in the queue...
-        ret = cur.next.data;
+        ret = current.next.data;
 
         // detatch the last item in the queue...
-        cur.next = null;
+        current.next = null;
 
         break;
       }
       else
       {
         // otherwise, continue moving towards the tail of the queue...
-        cur = cur.next;
+        current = current.next;
       }
     }
 

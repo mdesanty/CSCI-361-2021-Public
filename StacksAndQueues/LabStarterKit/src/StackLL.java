@@ -46,7 +46,7 @@ public class StackLL<T> implements IStack<T>
     if (isEmpty())
       throw new IllegalStateException("top error: stack is empty!");
 
-    return  head.next.data;
+    return head.next.data;
   }
 
   @Override
@@ -68,20 +68,20 @@ public class StackLL<T> implements IStack<T>
   {
     // runs in linear time: O(n)
 
-    StringBuffer sb = new StringBuffer("top->");
+    StringBuffer buffer = new StringBuffer("top->");
     if (!isEmpty())
     {
       Node node = head.next;
-      sb.append(node.data.toString());
+      buffer.append(node.data.toString());
 
       while (node.next != null)
       {
         node = node.next;
-        sb.append("->");
-        sb.append(node.data.toString());
+        buffer.append("->");
+        buffer.append(node.data.toString());
       }
     }
-    return sb.toString();
+    return buffer.toString();
   }
 
   private class Node
