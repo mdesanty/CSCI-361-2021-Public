@@ -53,11 +53,11 @@ public class Huffman {
     //   or you will pass "1" as the second parameter when calling it for the right child.
   }
 	
-	public void printTree() {
+  public void printTree() {
 
   }
 
-	public String getCode(char ch) {
+  public String getCode(char ch) {
     // This should perform in constant time: O(C)
   }
 
