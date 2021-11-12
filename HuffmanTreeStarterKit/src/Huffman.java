@@ -66,7 +66,7 @@ public class Huffman {
     // Iterate over the characters in value and build the encoded value.
   }
 
-	public String decode(String code) {
+  public String decode(String code) {
     // This should perform in linear time O(n)
     // Iterate over the characters of the code. Start at the root and crawl down the tree (left for 0 and right for 1)
     // until you reach a leaf (character).
